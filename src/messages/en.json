@@ -232,5 +232,68 @@
     "title": "Ready to Start Your Learning Journey?",
     "description": "Book a free consultation to discuss which program suits you best.",
     "button": "Start Learning Now"
+  },
+  "LoginPage": {
+    "badge": "Portal Access",
+    "title": "Welcome Back to",
+    "highlight": "Webind Edu",
+    "subtitle": "Choose your role to access your personalized learning space.",
+    "studentTab": "Student Portal",
+    "tutorTab": "Tutor Management",
+    "studentDesc": "Track your learning modules, upcoming private sessions, and skill milestones.",
+    "tutorDesc": "Manage your assigned students, schedule private classes, and log attendance.",
+    "emailLabel": "Email Address",
+    "passwordLabel": "Password",
+    "rememberMe": "Remember this device",
+    "forgotPassword": "Forgot Password?",
+    "btnStudentLogin": "Sign In as Student",
+    "btnTutorLogin": "Sign In as Tutor",
+    "demoStudent": "1-Click Demo as Student (Andi)",
+    "demoTutor": "1-Click Demo as Tutor (Ahmad)",
+    "noAccount": "Don't have an account yet?",
+    "registerNow": "Register for a Program"
+  },
+  "StudentPortal": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "myLearning": "My Learning",
+      "schedule": "Schedule",
+      "materials": "Materials",
+      "progress": "Skill Progress",
+      "backToHome": "Back to Home"
+    },
+    "welcome": "Welcome back",
+    "streak": "Learning Streak",
+    "streakDays": "days active",
+    "currentProgram": "Current Program",
+    "progress": "Overall Progress",
+    "nextLesson": "Next Lesson",
+    "joinClass": "Join Class",
+    "upcomingAssignments": "Upcoming Tasks",
+    "tutorFeedback": "Latest Tutor Note",
+    "skillsMastered": "Skills Mastered",
+    "viewAll": "View All",
+    "attendanceRate": "Attendance Rate",
+    "completedSessions": "Completed Sessions"
+  },
+  "TutorPortal": {
+    "nav": {
+      "dashboard": "Overview",
+      "students": "Students",
+      "schedule": "Schedule",
+      "attendance": "Attendance",
+      "progress": "Progress & Skills",
+      "backToHome": "Back to Home"
+    },
+    "overview": "Tutor Overview",
+    "classesToday": "Classes Today",
+    "totalStudents": "Active Students",
+    "pendingReviews": "Pending Reviews",
+    "avgAttendance": "Avg. Attendance",
+    "startMeeting": "Open Meeting",
+    "markAttendance": "Mark Attendance",
+    "studentList": "Student Directory",
+    "studentProfile": "Student Profile & History",
+    "saveNotes": "Save Tutor Note"
   }
 }

@@ -232,5 +232,68 @@
     "title": "Siap Memulai Perjalanan Belajarmu?",
     "description": "Konsultasi gratis untuk menentukan program yang paling cocok untukmu.",
     "button": "Mulai Belajar Sekarang"
+  },
+  "LoginPage": {
+    "badge": "Akses Portal",
+    "title": "Selamat Datang Kembali di",
+    "highlight": "Webind Edu",
+    "subtitle": "Pilih peranmu untuk masuk ke ruang belajar personalmu.",
+    "studentTab": "Portal Siswa",
+    "tutorTab": "Manajemen Tutor",
+    "studentDesc": "Pantau modul belajar, jadwal sesi private, dan progress skill penguasaanmu.",
+    "tutorDesc": "Kelola data siswa, jadwalkan kelas privat, dan catat absensi serta evaluasi.",
+    "emailLabel": "Alamat Email",
+    "passwordLabel": "Kata Sandi",
+    "rememberMe": "Ingat di perangkat ini",
+    "forgotPassword": "Lupa Password?",
+    "btnStudentLogin": "Masuk sebagai Siswa",
+    "btnTutorLogin": "Masuk sebagai Tutor",
+    "demoStudent": "1-Klik Demo Siswa (Andi)",
+    "demoTutor": "1-Klik Demo Tutor (Ahmad)",
+    "noAccount": "Belum memiliki akun?",
+    "registerNow": "Daftar Program Belajar"
+  },
+  "StudentPortal": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "myLearning": "Pembelajaran Saya",
+      "schedule": "Jadwal Belajar",
+      "materials": "Materi & Modul",
+      "progress": "Progress Skill",
+      "backToHome": "Kembali ke Beranda"
+    },
+    "welcome": "Selamat datang kembali",
+    "streak": "Learning Streak",
+    "streakDays": "hari aktif",
+    "currentProgram": "Program Saat Ini",
+    "progress": "Total Progress",
+    "nextLesson": "Sesi Berikutnya",
+    "joinClass": "Masuk Kelas",
+    "upcomingAssignments": "Tugas Mendatang",
+    "tutorFeedback": "Catatan Terbaru Tutor",
+    "skillsMastered": "Skill yang Dikuasai",
+    "viewAll": "Lihat Semua",
+    "attendanceRate": "Tingkat Kehadiran",
+    "completedSessions": "Sesi Selesai"
+  },
+  "TutorPortal": {
+    "nav": {
+      "dashboard": "Ringkasan",
+      "students": "Data Siswa",
+      "schedule": "Jadwal Mengajar",
+      "attendance": "Absensi",
+      "progress": "Progress & Evaluasi",
+      "backToHome": "Kembali ke Beranda"
+    },
+    "overview": "Dashboard Tutor",
+    "classesToday": "Kelas Hari Ini",
+    "totalStudents": "Siswa Aktif",
+    "pendingReviews": "Tugas Perlu Dinilai",
+    "avgAttendance": "Rata-rata Kehadiran",
+    "startMeeting": "Buka Kelas Meet",
+    "markAttendance": "Catat Absensi",
+    "studentList": "Daftar Siswa Bimbingan",
+    "studentProfile": "Profil & Riwayat Belajar",
+    "saveNotes": "Simpan Catatan Tutor"
   }
 }

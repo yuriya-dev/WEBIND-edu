@@ -20,6 +20,7 @@ export default function Navbar() {
     pricing: { id: "harga", en: "pricing" },
     faq: { id: "faq", en: "faq" },
     register: { id: "daftar", en: "register" },
+    login: { id: "masuk", en: "login" },
   };
 
   const getLocalizedHref = (key: string) => {
@@ -129,8 +130,15 @@ export default function Navbar() {
           </div>
 
           <Link
+            href={getLocalizedHref("login")}
+            className="text-sm font-semibold text-primary hover:text-text-muted transition-colors px-3 py-2"
+          >
+            {tCommon("login")}
+          </Link>
+
+          <Link
             href={getLocalizedHref("register")}
-            className="px-5 py-2.5 rounded-lg bg-accent text-primary font-semibold text-sm hover:opacity-90 transition-opacity flex items-center gap-1"
+            className="px-5 py-2.5 rounded-lg bg-accent text-primary font-semibold text-sm hover:opacity-90 transition-opacity flex items-center gap-1 shadow-sm"
           >
             {tCommon("startLearning")} <ArrowUpRight className="w-4 h-4" />
           </Link>
@@ -174,13 +182,22 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link
-            href={getLocalizedHref("register")}
-            onClick={() => setIsOpen(false)}
-            className="block w-full text-center px-5 py-3 rounded-lg bg-accent text-primary font-semibold text-sm"
-          >
-            {tCommon("startLearning")}
-          </Link>
+          <div className="pt-2 border-t border-secondary space-y-2">
+            <Link
+              href={getLocalizedHref("login")}
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-center px-5 py-3 rounded-lg bg-secondary text-primary font-semibold text-sm"
+            >
+              {tCommon("login")}
+            </Link>
+            <Link
+              href={getLocalizedHref("register")}
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-center px-5 py-3 rounded-lg bg-accent text-primary font-semibold text-sm"
+            >
+              {tCommon("startLearning")}
+            </Link>
+          </div>
         </div>
       )}
     </header>
