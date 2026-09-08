@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
           <Link href={`/${locale}`} className="flex items-center gap-2.5 transition-opacity hover:opacity-80">
             <Image
-              src="/webind.svg"
+              src="/nav-logo.svg"
               alt="webind mark"
               width={32}
               height={32}
