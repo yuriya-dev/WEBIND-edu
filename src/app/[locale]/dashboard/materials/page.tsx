@@ -17,13 +17,18 @@ import {
   PlayCircle,
 } from "lucide-react";
 import StudentLayout from "@/components/dashboard/StudentLayout";
-import { learningMaterialsData } from "@/lib/data/learningMaterials";
-import { mockStudent } from "@/lib/data/student";
 import { useLocale } from "next-intl";
+import { mockStudent } from "@/lib/data/student";
+import { learningMaterialsData } from "@/lib/data/learningMaterials";
+import {
+  mockStudioMaterials,
+  mockStudioQuizzes,
+  mockStudioPresentations,
+} from "@/lib/data/contentStudio";
 
 export default function StudentMaterialsPage() {
   const locale = useLocale();
-  const [activeTab, setActiveTab] = useState<"interactive" | "downloads">("interactive");
+  const [activeTab, setActiveTab] = useState<"interactive" | "presentations" | "quizzes" | "downloads">("interactive");
 
   const downloadableResources = [
     {
@@ -94,7 +99,7 @@ export default function StudentMaterialsPage() {
         </div>
 
         {/* Tab Selection */}
-        <div className="flex items-center gap-2 p-1 bg-secondary/80 rounded-xl w-fit">
+        <div className="flex flex-wrap items-center gap-2 p-1 bg-secondary/80 rounded-xl w-fit">
           <button
             onClick={() => setActiveTab("interactive")}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${
@@ -104,7 +109,31 @@ export default function StudentMaterialsPage() {
             }`}
           >
             <BookOpen className="w-4 h-4 text-accent" />
-            <span>Materi Bacaan Online ({learningMaterialsData.length})</span>
+            <span>Materi Bacaan ({mockStudioMaterials.length})</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("presentations")}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${
+              activeTab === "presentations"
+                ? "bg-background text-primary shadow-xs"
+                : "text-text-muted hover:text-primary"
+            }`}
+          >
+            <PlayCircle className="w-4 h-4 text-accent" />
+            <span>Slide Presentasi ({mockStudioPresentations.length})</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("quizzes")}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${
+              activeTab === "quizzes"
+                ? "bg-background text-primary shadow-xs"
+                : "text-text-muted hover:text-primary"
+            }`}
+          >
+            <CheckCircle2 className="w-4 h-4 text-accent" />
+            <span>Kuis & Latihan ({mockStudioQuizzes.length})</span>
           </button>
 
           <button
@@ -197,7 +226,115 @@ export default function StudentMaterialsPage() {
           </div>
         )}
 
-        {/* TAB 2: DOWNLOADABLE RESOURCES */}
+        {/* TAB 2: PRESENTATIONS (SLIDE REVIEW) */}
+        {activeTab === "presentations" && (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-base font-bold text-primary">Slide Presentasi Pertemuan Sesi</h3>
+              <span className="text-xs font-mono text-text-muted">
+                Buka kembali materi yang diajarkan tutor saat tatap muka
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {mockStudioPresentations.map((pres) => (
+                <div
+                  key={pres.id}
+                  className="card-flat p-5 rounded-2xl border border-secondary flex flex-col justify-between hover:border-primary transition-all group"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-background border border-secondary text-primary font-bold">
+                        Sesi {pres.sessionNumber} • {pres.estimatedMinutes} Menit
+                      </span>
+                      <span className="text-[10px] font-mono text-text-muted">
+                        {pres.slides.length} Slide
+                      </span>
+                    </div>
+
+                    <h4 className="text-sm sm:text-base font-bold text-primary leading-snug">
+                      {pres.title}
+                    </h4>
+
+                    <p className="text-xs text-text-muted">
+                      Slide pembelajaran langsung tatap muka dengan ilustrasi visual dan mini-kuis jeda sesi.
+                    </p>
+                  </div>
+
+                  <div className="pt-4 mt-4 border-t border-secondary/80 flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-emerald-700 font-bold">
+                      ✓ Offline-Ready
+                    </span>
+
+                    <Link
+                      href={`/${locale}/tutor/studio/presentations/${pres.id}`}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary text-background font-bold text-xs hover:bg-neutral-800 transition-colors"
+                    >
+                      <PlayCircle className="w-3.5 h-3.5 text-accent" />
+                      <span>Buka Slide</span>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* TAB 3: QUIZZES & DRILLS */}
+        {activeTab === "quizzes" && (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-base font-bold text-primary">Kuis Evaluasi & Latihan Mandiri</h3>
+              <span className="text-xs font-mono text-text-muted">
+                Uji pemahaman setelah sesi privat
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {mockStudioQuizzes.map((quiz) => (
+                <div
+                  key={quiz.id}
+                  className="card-flat p-5 rounded-2xl border border-secondary flex flex-col justify-between hover:border-primary transition-all group"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-background border border-secondary text-primary font-bold">
+                        Sesi {quiz.sessionNumber} • KKM {quiz.passingScore}
+                      </span>
+                      <span className="text-[10px] font-mono text-text-muted">
+                        {quiz.durationMinutes} Menit
+                      </span>
+                    </div>
+
+                    <h4 className="text-sm sm:text-base font-bold text-primary leading-snug">
+                      {quiz.title}
+                    </h4>
+
+                    <p className="text-xs text-text-muted line-clamp-2">
+                      {quiz.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 mt-4 border-t border-secondary/80 flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-text-muted">
+                      {quiz.questions.length} Butir Soal
+                    </span>
+
+                    <Link
+                      href={`/${locale}/tutor/studio/quizzes/${quiz.id}`}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary text-background font-bold text-xs hover:bg-neutral-800 transition-colors"
+                    >
+                      <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+                      <span>Kerjakan Kuis</span>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* TAB 4: DOWNLOADABLE RESOURCES */}
         {activeTab === "downloads" && (
           <div className="space-y-4">
             <h3 className="text-base font-bold text-primary">File Penunjang & Template Kode</h3>

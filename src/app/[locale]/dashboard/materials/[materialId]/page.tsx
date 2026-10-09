@@ -28,6 +28,8 @@ import {
 } from "lucide-react";
 import StudentLayout from "@/components/dashboard/StudentLayout";
 import { learningMaterialsData, LearningMaterial } from "@/lib/data/learningMaterials";
+import { mockStudioMaterials } from "@/lib/data/contentStudio";
+import UnifiedMaterialRenderer from "@/components/dashboard/UnifiedMaterialRenderer";
 import { useLocale } from "next-intl";
 
 export default function MaterialReaderPage() {
@@ -42,6 +44,9 @@ export default function MaterialReaderPage() {
   const [showQuizResult, setShowQuizResult] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [exerciseRunOutput, setExerciseRunOutput] = useState<string | null>(null);
+
+  // Check if material is in studio materials first
+  const studioMaterial = mockStudioMaterials.find((m) => m.id === materialId);
 
   // Find current material
   const currentMaterialIndex = useMemo(() => {
@@ -256,20 +261,29 @@ export default function MaterialReaderPage() {
               </div>
             </div>
 
-            {/* Material Content Sections */}
-            <div className="space-y-10">
-              {currentMaterial.sections.map((section, sIdx) => (
-                <section key={section.id} className="space-y-4">
-                  <h2 className="text-lg sm:text-xl font-bold text-primary">
-                    {section.title}
-                  </h2>
+            {/* Material Content Sections / Blocks */}
+            {studioMaterial ? (
+              <div className="space-y-6">
+                <UnifiedMaterialRenderer
+                  blocks={studioMaterial.blocks}
+                  isEditable={false}
+                  userRole="student"
+                />
+              </div>
+            ) : (
+              <div className="space-y-10">
+                {currentMaterial.sections.map((section, sIdx) => (
+                  <section key={section.id} className="space-y-4">
+                    <h2 className="text-lg sm:text-xl font-bold text-primary">
+                      {section.title}
+                    </h2>
 
-                  {/* Paragraphs */}
-                  <div className="space-y-3 text-sm sm:text-base text-primary/90 leading-relaxed">
-                    {section.content.map((paragraph, pIdx) => (
-                      <p key={pIdx}>{paragraph}</p>
-                    ))}
-                  </div>
+                    {/* Paragraphs */}
+                    <div className="space-y-3 text-sm sm:text-base text-primary/90 leading-relaxed">
+                      {section.content.map((paragraph, pIdx) => (
+                        <p key={pIdx}>{paragraph}</p>
+                      ))}
+                    </div>
 
                   {/* Callout Box if exists */}
                   {section.callout && (
@@ -351,7 +365,8 @@ export default function MaterialReaderPage() {
                   )}
                 </section>
               ))}
-            </div>
+              </div>
+            )}
 
             {/* ========================================================= */}
             {/* INTERACTIVE QUIZ (DICODING KNOWLEDGE CHECK)               */}

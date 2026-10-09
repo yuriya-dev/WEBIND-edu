@@ -274,11 +274,11 @@
   },
   "StudentPortal": {
     "nav": {
-      "dashboard": "Dashboard",
-      "myLearning": "My Learning",
+      "dashboard": "Home",
+      "myLearning": "Learning Path",
       "schedule": "Schedule",
-      "materials": "Materials",
-      "progress": "Skill Progress",
+      "materials": "Materials, Slides & Quizzes",
+      "progress": "Skills & Projects",
       "backToHome": "Back to Home"
     },
     "welcome": "Welcome back",
@@ -297,22 +297,25 @@
   },
   "TutorPortal": {
     "nav": {
-      "dashboard": "Overview",
+      "dashboard": "Today",
       "students": "Students",
       "schedule": "Schedule",
-      "attendance": "Attendance",
-      "progress": "Progress & Skills",
+      "attendance": "Sessions & Attendance",
+      "progress": "Reports & Evaluation",
+      "studio": "Content Studio",
       "backToHome": "Back to Home"
     },
     "overview": "Tutor Overview",
-    "classesToday": "Classes Today",
+    "classesToday": "Today's Home Sessions",
     "totalStudents": "Active Students",
     "pendingReviews": "Pending Reviews",
     "avgAttendance": "Avg. Attendance",
-    "startMeeting": "Open Meeting",
-    "markAttendance": "Mark Attendance",
+    "startMeeting": "Open Online Link (Backup)",
+    "markAttendance": "Mark Session",
     "studentList": "Student Directory",
     "studentProfile": "Student Profile & History",
-    "saveNotes": "Save Tutor Note"
+    "saveNotes": "Save Tutor Note",
+    "studioTitle": "Learning Content Studio",
+    "studioSubtitle": "Create, update, and customize Syllabus Materials, Quiz Banks, and Interactive Slide Decks."
   }
 }

@@ -274,11 +274,11 @@
   },
   "StudentPortal": {
     "nav": {
-      "dashboard": "Dashboard",
-      "myLearning": "Pembelajaran Saya",
-      "schedule": "Jadwal Belajar",
-      "materials": "Materi & Modul",
-      "progress": "Progress Skill",
+      "dashboard": "Beranda",
+      "myLearning": "Jalur Belajar",
+      "schedule": "Jadwal",
+      "materials": "Materi, Slide & Kuis",
+      "progress": "Keterampilan & Proyek",
       "backToHome": "Kembali ke Beranda"
     },
     "welcome": "Selamat datang kembali",
@@ -297,22 +297,25 @@
   },
   "TutorPortal": {
     "nav": {
-      "dashboard": "Ringkasan",
+      "dashboard": "Hari Ini",
       "students": "Data Siswa",
       "schedule": "Jadwal Mengajar",
-      "attendance": "Absensi",
-      "progress": "Progress & Evaluasi",
+      "attendance": "Absensi & Sesi",
+      "progress": "Laporan & Evaluasi",
+      "studio": "Studio Konten",
       "backToHome": "Kembali ke Beranda"
     },
     "overview": "Dashboard Tutor",
-    "classesToday": "Kelas Hari Ini",
+    "classesToday": "Sesi Les Hari Ini",
     "totalStudents": "Siswa Aktif",
     "pendingReviews": "Tugas Perlu Dinilai",
     "avgAttendance": "Rata-rata Kehadiran",
-    "startMeeting": "Buka Kelas Meet",
-    "markAttendance": "Catat Absensi",
+    "startMeeting": "Buka Link Daring (Cadangan)",
+    "markAttendance": "Catat Sesi",
     "studentList": "Daftar Siswa Bimbingan",
     "studentProfile": "Profil & Riwayat Belajar",
-    "saveNotes": "Simpan Catatan Tutor"
+    "saveNotes": "Simpan Catatan Tutor",
+    "studioTitle": "Studio Konten Pembelajaran",
+    "studioSubtitle": "Buat, perbarui, dan sesuaikan Materi Silabus, Bank Kuis, dan Slide Presentasi untuk sesi privat."
   }
 }

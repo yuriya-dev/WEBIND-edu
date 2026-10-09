@@ -141,6 +141,13 @@ export default function LoginPage() {
               >
                 <ShieldCheck className="w-3.5 h-3.5" /> {t("demoTutor")}
               </button>
+              <button
+                type="button"
+                onClick={() => router.push(`/${locale}/parent`)}
+                className="w-full py-2.5 rounded-lg bg-emerald-500 text-white font-bold text-xs hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2"
+              >
+                <ShieldCheck className="w-3.5 h-3.5" /> 1-Klik Demo Orang Tua (Ny. Diana)
+              </button>
             </div>
           </GsapReveal>
 

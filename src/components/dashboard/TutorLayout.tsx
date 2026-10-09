@@ -14,6 +14,7 @@ import {
   GraduationCap,
   Menu,
   X,
+  Sparkles,
 } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { mockTutor } from "@/lib/data/tutor";
@@ -43,6 +44,7 @@ export default function TutorLayout({ children }: { children: ReactNode }) {
 
   const navItems = [
     { name: t("nav.dashboard"), href: `/${locale}/tutor`, icon: LayoutDashboard },
+    { name: t("nav.studio"), href: `/${locale}/tutor/studio`, icon: Sparkles },
     { name: t("nav.students"), href: `/${locale}/tutor/students`, icon: Users },
     { name: t("nav.schedule"), href: `/${locale}/tutor/schedule`, icon: Calendar },
     { name: t("nav.attendance"), href: `/${locale}/tutor/attendance`, icon: ClipboardCheck },

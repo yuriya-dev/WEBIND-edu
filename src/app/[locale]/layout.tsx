@@ -6,6 +6,7 @@ import LoadingScreen from "@/components/shared/LoadingScreen";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Toaster } from 'react-hot-toast';
 
 const geistSans = Inter({
   variable: "--font-geist-sans",
@@ -110,6 +111,33 @@ export default async function LocaleLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-primary`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              duration: 3500,
+              style: {
+                background: '#111111',
+                color: '#ffffff',
+                border: '1px solid #333333',
+                fontSize: '12px',
+                borderRadius: '14px',
+                padding: '10px 16px',
+                fontWeight: 600,
+              },
+              success: {
+                iconTheme: {
+                  primary: '#b7ff00',
+                  secondary: '#111111',
+                },
+              },
+              error: {
+                iconTheme: {
+                  primary: '#ef4444',
+                  secondary: '#ffffff',
+                },
+              },
+            }}
+          />
           <LoadingScreen />
           {children}
           <FloatingWhatsApp />

@@ -117,7 +117,7 @@ export default function ProgramDetailPage() {
                 {locale === "en" ? "Format" : "Format Kelas"}
               </h3>
               <p className="text-xs text-text-muted leading-relaxed">
-                {locale === "en" ? "1-on-1 Private Online (Flexible Schedule)" : "1-on-1 Privat Online (Jadwal Fleksibel)"}
+                {locale === "en" ? "1-on-1 Private (Flexible Schedule)" : "1-on-1 Privat (Jadwal Fleksibel)"}
               </p>
             </div>
           </div>

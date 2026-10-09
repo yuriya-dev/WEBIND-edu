@@ -28,3 +28,10 @@ body {
   background-color: #dfdfdf;
   transform: translateY(-2px);
 }
+
+/* Fix margin-top on modals caused by Tailwind parent space-y-* utility */
+[class*="space-y-"] > .fixed,
+.fixed.inset-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
