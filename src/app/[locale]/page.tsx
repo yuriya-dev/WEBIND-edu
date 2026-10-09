@@ -46,7 +46,7 @@ export default function Home() {
         </section>
 
         {/* Programs (show 3 + view all) */}
-        <Programs limit={3} showViewAll={true} />
+        <Programs limit={3} showViewAll={true} showHeader={true} />
 
         {/* Learning Method */}
         <LearningMethod />
@@ -55,7 +55,7 @@ export default function Home() {
         <Testimonials />
 
         {/* FAQ */}
-        <FAQ />
+        <FAQ limit={6} showViewAll={true} />
 
         {/* CTA */}
         <CTABanner />

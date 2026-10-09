@@ -3,7 +3,7 @@
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import CTABanner from "@/components/sections/CTABanner";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle } from "@phosphor-icons/react";
 import GsapReveal from "@/components/shared/GsapReveal";
 import { useTranslations } from "next-intl";
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
             <ul className="space-y-4">
               {missions.map((m, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-sm text-primary">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <CheckCircle size={20} weight="fill" className="text-neutral-900 shrink-0 mt-0.5" />
                   <span>{m}</span>
                 </li>
               ))}
