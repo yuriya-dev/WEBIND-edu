@@ -1,11 +1,11 @@
 {
   "Metadata": {
-    "title": "Webind Edu — Personal Learning Platform for Computer & AI",
+    "title": "Webind Edu - Personal Learning Platform for Computer & AI",
     "description": "Learn Computer Science, Programming, Web Development & AI through guided personal learning and real-world projects.",
     "keywords": "Private Learning, Computer Science, Programming Course, AI Learning, Web Development, Coding Class, Personal Tutor",
-    "ogTitle": "Webind Edu — Learn. Build. Grow.",
+    "ogTitle": "Webind Edu - Learn. Build. Grow.",
     "ogDescription": "Personal learning platform for Computer Science, Programming & AI. Learn by doing with real projects.",
-    "twitterTitle": "Webind Edu — Personal Learning Platform",
+    "twitterTitle": "Webind Edu - Personal Learning Platform",
     "twitterDescription": "Learn Computer Science, Programming & AI through guided personal learning.",
     "jsonLdDesc": "Personal learning platform for Computer Science, Programming, Web Development & AI education."
   },
@@ -33,7 +33,7 @@
     "badge": "Personal Learning Platform",
     "title": "Learn Computer Science.",
     "highlight": "Build Real Things.",
-    "description": "Private learning for Computer, Programming, Web Development & AI — designed around your goals and learning pace.",
+    "description": "Private learning for Computer, Programming, Web Development & AI - designed around your goals and learning pace.",
     "cta_primary": "Explore Programs",
     "cta_secondary": "How It Works"
   },
@@ -42,7 +42,7 @@
     "title": "Learning That Produces Real Results",
     "stat1_number": "1-on-1",
     "stat1_title": "Personal Learning",
-    "stat1_desc": "Every session is tailored to your skill level. No generic classes — learn at your own pace with a dedicated tutor.",
+    "stat1_desc": "Every session is tailored to your skill level. No generic classes - learn at your own pace with a dedicated tutor.",
     "stat2_number": "100%",
     "stat2_title": "Project-Based",
     "stat2_desc": "Every program ends with a real project for your portfolio. Learn by building, not just watching."
@@ -50,7 +50,7 @@
   "Programs": {
     "badge": "Learning Programs",
     "title": "Choose Your Learning Path",
-    "subtitle": "From digital basics to AI development — structured learning tracks designed for real skill mastery.",
+    "subtitle": "From digital basics to AI development - structured learning tracks designed for real skill mastery.",
     "digital_starter": {
       "title": "Digital Starter",
       "level": "Beginner",
@@ -115,7 +115,7 @@
     "step2_title": "Practice",
     "step2_desc": "Apply what you learned through hands-on exercises and coding challenges.",
     "step3_title": "Build",
-    "step3_desc": "Create real projects that demonstrate your skills — from apps to websites.",
+    "step3_desc": "Create real projects that demonstrate your skills - from apps to websites.",
     "step4_title": "Evaluate",
     "step4_desc": "Get personal feedback, track your progress, and improve continuously."
   },
